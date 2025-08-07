@@ -1,0 +1,29 @@
+{
+    "programming_languages": [
+      "Python", "JavaScript", "Java", "C++", "C#", "PHP", "Ruby", "Go", "Rust", "Swift", "Kotlin", "Scala", "R", "MATLAB", "SQL", "TypeScript"
+    ],
+    "web_technologies": [
+      "HTML", "CSS", "React", "Angular", "Vue.js", "Node.js", "Express", "Django", "Flask", "Spring", "Laravel", "Rails", "ASP.NET", "jQuery", "Bootstrap", "Sass", "Less"
+    ],
+    "databases": [
+      "MySQL", "PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Oracle", "SQLite", "Cassandra", "DynamoDB", "Neo4j"
+    ],
+    "cloud_platforms": [
+      "AWS", "Azure", "Google Cloud", "Heroku", "DigitalOcean", "Vercel", "Netlify"
+    ],
+    "devops_tools": [
+      "Docker", "Kubernetes", "Jenkins", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "Chef", "Puppet"
+    ],
+    "version_control": [
+      "Git", "GitHub", "GitLab", "Bitbucket", "Subversion"
+    ],
+    "data_science": [
+      "Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter", "Keras", "OpenCV", "Natural Language Processing", "Computer Vision"
+    ],
+    "soft_skills": [
+      "Leadership", "Communication", "Problem Solving", "Team Collaboration", "Project Management", "Time Management", "Critical Thinking", "Adaptability", "Creativity", "Attention to Detail"
+    ],
+    "frameworks_libraries": [
+      "React", "Angular", "Vue.js", "Django", "Flask", "Express.js", "Spring Boot", "Laravel", "Ruby on Rails", "ASP.NET Core", "Bootstrap", "Material-UI", "Tailwind CSS"
+    ]
+  }
