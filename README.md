@@ -100,8 +100,7 @@ Make sure you have the following installed:
 
 **Backend** (create `.env` in `/backend`):
 ```env
-OPENAI_API_KEY=your_openai_api_key_here
-MODEL_NAME=gpt-3.5-turbo
+GEMINI_API_KEY=your_openai_api_key_here
 DEBUG=True
 PORT=5000
 ```
