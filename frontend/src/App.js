@@ -40,7 +40,7 @@ function App() {
                 </svg>
               </motion.div>
               <h1 className="text-xl font-semibold text-[#f0f6fc]">
-                CoverLetter Generator
+                CoverCraft
               </h1>
             </div>
             
