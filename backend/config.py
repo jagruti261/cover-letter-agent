@@ -26,7 +26,7 @@ class Config:
     HOST = os.getenv('HOST', '0.0.0.0')
     
     # CORS settings
-      ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS','http://localhost:3000').split(',')
+      ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS',"http://localhost:3000,https://cover-letter-agent-frontend.onrender.com").split(',')
     
     # Logging
     LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')
