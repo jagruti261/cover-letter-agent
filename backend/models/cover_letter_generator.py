@@ -13,7 +13,7 @@ class CoverLetterGenerator:
 
     def __init__(self):
         # Kimi K2 config
-        self.kimi_api_key = os.getenv('KIMI_API_KEY')
+        self.kimi_api_key = os.getenv('KIMIK2_API_KEY')
         self.kimi_model = 'moonshotai/kimi-k2:free'
         self.kimi_endpoint = 'https://openrouter.ai/api/v1/completions'
 
