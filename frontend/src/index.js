@@ -10,7 +10,7 @@ document.title = "CoverCraft - Crafting personalized cover letters that make you
 // Set favicon
 const link = document.createElement("link");
 link.rel = "icon";
-link.href = "/favicon.ico"; // path in public folder
+link.href = "/CoverCraft-fav.png"; 
 document.head.appendChild(link);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
