@@ -441,14 +441,14 @@ function App() {
             <div className="col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-6 h-6 bg-[#f0f6fc] text-[#0d1117] rounded-sm flex items-center justify-center">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" strokeWidth={1.5} fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
+                  <span className="material-symbols-outlined text-[20px]">
+                    stylus_laser_pointer
+                  </span>
                 </div>
-                <span className="font-semibold text-[#f0f6fc]">CoverLetter Generator</span>
+                <span className="font-semibold text-[#f0f6fc]">CoverCraft</span>
               </div>
               <p className="text-[#7d8590] text-sm max-w-sm leading-relaxed">
-                Making job applications easier with AI-powered cover letter generation. 
+                Making job applications easier with AI-powered cover letter generator. 
                 Built for developers, by developers.
               </p>
             </div>
@@ -484,7 +484,7 @@ function App() {
           
           <div className="border-t border-[#30363d] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-[#7d8590] text-sm">
-            © 2024 CoverLetter Generator. Built with React and Gemini AI.
+            © 2025 CoverCraft. Built with React and Python.
           </p>
           
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
