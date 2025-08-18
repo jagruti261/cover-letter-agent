@@ -12,11 +12,6 @@ class CoverLetterGenerator:
     """Generate personalized cover letters using Kimi K2, fallback to Gemini AI, then internal template"""
 
     def __init__(self):
-        # Kimi K2 config
-        self.kimi_api_key = os.getenv('KIMIK2_API_KEY')
-        self.kimi_model = 'moonshotai/kimi-k2:free'
-        self.kimi_endpoint = 'https://openrouter.ai/api/v1/completions'
-
         # Gemini config
         self.gemini_api_key = os.getenv('GEMINI_API_KEY')
         if self.gemini_api_key:
@@ -40,29 +35,7 @@ class CoverLetterGenerator:
         template_func = self.templates.get(template_style, self.templates['professional'])
         prompt = template_func(resume_data, job_data, custom_message)
 
-        # 1️⃣ Try Kimi K2
-        if self.kimi_api_key:
-            try:
-                headers = {
-                    'Authorization': f'Bearer {self.kimi_api_key}',
-                    'Content-Type': 'application/json'
-                }
-                payload = {
-                    'model': self.kimi_model,
-                    'messages': [{'role': 'user', 'content': prompt}],
-                    'temperature': 0.7,
-                    'max_tokens': 1200
-                }
-                response = requests.post(self.kimi_endpoint, headers=headers, json=payload)
-                response.raise_for_status()
-                data = response.json()
-                cover_letter_text = data['choices'][0]['message']['content']
-                cover_letter_text = self._post_process_cover_letter(cover_letter_text, resume_data, job_data)
-                return self._build_response(cover_letter_text, template_style, resume_data, job_data)
-            except Exception as e:
-                logger.warning(f"Kimi K2 failed: {e}. Falling back to Gemini AI...")
-
-        # 2️⃣ Fallback: Gemini AI
+         # Fallback: Gemini AI
         if self.gemini_api_key:
             try:
                 response = self.gemini_model.generate_content(prompt)
@@ -72,7 +45,7 @@ class CoverLetterGenerator:
             except Exception as e:
                 logger.warning(f"Gemini AI failed: {e}")
 
-        # 3️⃣ Last-resort: Internal fallback cover letter
+        # Last-resort: Internal fallback cover letter
         logger.info("Falling back to internal cover letter generator.")
         cover_letter_text = self._internal_fallback_cover_letter(resume_data, job_data, custom_message)
         return self._build_response(cover_letter_text, template_style, resume_data, job_data)
